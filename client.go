@@ -104,7 +104,6 @@ func (l *laofida) connect(ctx context.Context) (string, error) {
 		return "", fmt.Errorf("connectLAOFIDA: status %d, body: %s", resp.StatusCode, rbody)
 	}
 
-	// Decode the response
 	var reply struct {
 		Success bool `json:"success"`
 		Data    struct {
@@ -125,12 +124,12 @@ func (l *laofida) connect(ctx context.Context) (string, error) {
 	return reply.Data.Token, nil
 }
 
-func (l *laofida) getSmartTaxs(ctx context.Context, fromDate, toDate, tin, docType string) (SmartTaxRecords, error) {
+func (l *laofida) getSmartTaxs(ctx context.Context, r *ReqFilter) (SmartTaxRecords, error) {
 	payload := map[string]string{
-		"from_date": fromDate,
-		"to_date":   toDate,
-		"tin":       tin,
-		"type":      docType, // e.g., "EX"
+		"from_date": r.DateStart,
+		"to_date":   r.DateEnd,
+		"tin":       r.TIN,
+		"type":      r.Type, // e.g., "EX"
 	}
 	jsonData, err := json.Marshal(payload)
 	if err != nil {

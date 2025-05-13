@@ -5,6 +5,13 @@ import (
 )
 
 type (
+	ReqFilter struct {
+		DateStart string `json:"dateStart"`
+		DateEnd   string `json:"dateEnd"`
+		TIN       string `json:"tin"`
+		Type      string `json:"type"`
+	}
+
 	SmartTaxRecord struct {
 		InstanceID   string          `json:"instanceid"`
 		IdeCuoCod    string          `json:"ide_cuo_cod"`

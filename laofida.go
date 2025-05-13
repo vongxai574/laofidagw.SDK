@@ -39,7 +39,7 @@ type (
 )
 
 type LAOFIDA interface {
-	GetDataSmartTaxs(ctx context.Context, dateStart, dateEnd, tin, docType string) (SmartTaxRecords, error)
+	GetDataSmartTaxs(ctx context.Context, req *ReqFilter) (SmartTaxRecords, error)
 }
 
 // New creates new instance of LAOFIDA client.
@@ -69,6 +69,6 @@ func New(ctx context.Context, cfg *Config) (LAOFIDA, error) {
 	return client, nil
 }
 
-func (l *laofida) GetDataSmartTaxs(ctx context.Context, fromDate, toDate, tin, docType string) (SmartTaxRecords, error) {
-	return l.getSmartTaxs(ctx, fromDate, toDate, tin, docType)
+func (l *laofida) GetDataSmartTaxs(ctx context.Context, req *ReqFilter) (SmartTaxRecords, error) {
+	return l.getSmartTaxs(ctx, req)
 }
