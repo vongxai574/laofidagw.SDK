@@ -16,9 +16,9 @@
    ```bash
    import "github.com/vongxai574/laofidagw.SDK"
    ```
-Construct a new Telbiz client, then use the various services on the client to access different parts of the Telbiz API. For example:
+Construct a new Telbiz client, then use the various services on the client to access different parts of the laofidagw API. For example:
    ```bash
-ctx := context.Background()
+	ctx := context.Background()
 
 	cfg := &laofida.Config{
 		BaseURL:  "https://api.laofida.example.com",
@@ -31,5 +31,23 @@ ctx := context.Background()
 		log.Fatalf("failed to create LAOFIDA client: %v", err)
 	}
  ```
+# Call get GetDataSmartTaxs example:
+```bash
+	req := &laofida.ReqFilter{
+		DateStart: "2024-01-01",
+		DateEnd:   "2024-01-31",
+		TIN:       "123456789",
+		Type:      "EX",
+	}
+
+	data, err := client.GetDataSmartTaxs(ctx, req)
+	if err != nil {
+		log.Fatalf("failed to get SmartTax data: %v", err)
+	}
+
+	for _, record := range data {
+		fmt.Printf("Record ID: %s, Total Tax: %s\n", record.InstanceID, record.TotalTax.String())
+	}
+```
 
    
