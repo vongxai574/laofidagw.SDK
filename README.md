@@ -20,16 +20,16 @@ Construct a new Telbiz client, then use the various services on the client to ac
    ```bash
 ctx := context.Background()
 
-cfg := &laofida.Config{
-	BaseURL:  "https://api.laofida.example.com",
-	Username: "your-username",
-	Password: "your-password",
-}
+	cfg := &laofida.Config{
+		BaseURL:  "https://api.laofida.example.com",
+		Username: "your-username",
+		Password: "your-password",
+	}
 
-client, err := laofida.New(ctx, cfg)
-if err != nil {
-	log.Fatalf("failed to create LAOFIDA client: %v", err)
-}
+	client, err := laofida.New(ctx, cfg)
+	if err != nil {
+		log.Fatalf("failed to create LAOFIDA client: %v", err)
+	}
  ```
 
    
