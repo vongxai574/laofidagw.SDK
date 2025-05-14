@@ -9,7 +9,7 @@
 
 # Installation:
    ```bash 
-      go get github.com/yourusername/laofida
+   go get github.com/yourusername/laofida
    ```
 > Replace yourusername with the actual module path if you're using Go modules.
 
