@@ -11,21 +11,10 @@
    ```bash 
    go get github.com/vongxai574/laofidagw.SDK
    ```
-> Construct a new Telbiz client, then use the various services on the client to access different parts of the laofida API. For example:
+> Use go get to retrieve the latest version of the client.
 # Usage:
    ```bash
-         ctx := context.Background()
-      
-      	cfg := &laofida.Config{
-      		BaseURL:  "https://api.laofida.example.com",
-      		Username: "your-username",
-      		Password: "your-password",
-      	}
-      
-      	client, err := laofida.New(ctx, cfg)
-      	if err != nil {
-      		log.Fatalf("failed to create LAOFIDA client: %v", err)
-      	}
+         import "github.com/vongxai574/laofidagw.SDK"
    ```
 
    
