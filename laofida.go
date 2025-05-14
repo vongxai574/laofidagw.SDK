@@ -54,7 +54,7 @@ func New(ctx context.Context, cfg *Config) (LAOFIDA, error) {
 
 		// set http client with timeout.
 		hc: &http.Client{
-			Timeout: 60 * time.Second,
+			Timeout: 5 * time.Minute,
 		},
 	}
 
