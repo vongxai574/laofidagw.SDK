@@ -9,53 +9,23 @@
 
 # Installation:
    ```bash 
-   go get github.com/yourusername/laofida
+   go get github.com/vongxai574/laofidagw.SDK
    ```
-> Replace yourusername with the actual module path if you're using Go modules.
-
+> Construct a new Telbiz client, then use the various services on the client to access different parts of the laofida API. For example:
 # Usage:
-   ```bash 
-   package main
-
-   import (
-   	"context"
-   	"fmt"
-   	"log"
-   	"time"
-   
-   	"github.com/yourusername/laofida"
-   )
-
-   func main() {
-   	ctx := context.Background()
-   
-   	cfg := &laofida.Config{
-   		BaseURL:  "https://api.laofida.example.com",
-   		Username: "your-username",
-   		Password: "your-password",
-   	}
-   
-   	client, err := laofida.New(ctx, cfg)
-   	if err != nil {
-   		log.Fatalf("failed to create LAOFIDA client: %v", err)
-   	}
-   
-   	req := &laofida.ReqFilter{
-   		DateStart: "2024-01-01",
-   		DateEnd:   "2024-01-31",
-   		TIN:       "123456789",
-   		Type:      "EX",
-   	}
-   
-   	data, err := client.GetDataSmartTaxs(ctx, req)
-   	if err != nil {
-   		log.Fatalf("failed to get SmartTax data: %v", err)
-   	}
-   
-   	for _, record := range data {
-   		fmt.Printf("Record ID: %s, Total Tax: %s\n", record.InstanceID, record.TotalTax.String())
-   	}
-   }
-```
+   ```bash
+         ctx := context.Background()
+      
+      	cfg := &laofida.Config{
+      		BaseURL:  "https://api.laofida.example.com",
+      		Username: "your-username",
+      		Password: "your-password",
+      	}
+      
+      	client, err := laofida.New(ctx, cfg)
+      	if err != nil {
+      		log.Fatalf("failed to create LAOFIDA client: %v", err)
+      	}
+   ```
 
    
