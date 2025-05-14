@@ -1,2 +1,2 @@
-﻿# LaoFiDa SDK Go
+﻿# LAOFIDA Go Client
   
