@@ -16,7 +16,7 @@
    ```bash
    import "github.com/vongxai574/laofidagw.SDK"
    ```
-Construct a new Telbiz client, then use the various services on the client to access different parts of the laofidagw API. For example:
+Construct a new laofida client, then use the various services on the client to access different parts of the laofidagw API. For example:
    ```bash
 	ctx := context.Background()
 
