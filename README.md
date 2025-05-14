@@ -4,8 +4,8 @@
 # Features:
    - Automatic authentication with LAOFIDA API.
    - Auto token refresh with exponential backoff strategy.
-   Thread-safe token access.
-   SmartTax record retrieval via the GetDataSmartTaxs method.
+   - Thread-safe token access.
+   - SmartTax record retrieval via the GetDataSmartTaxs method.
 
 # Installation:
    `go get github.com/yourusername/laofida`
