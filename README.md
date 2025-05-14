@@ -49,5 +49,6 @@ Construct a new Telbiz client, then use the various services on the client to ac
 		fmt.Printf("Record ID: %s, Total Tax: %s\n", record.InstanceID, record.TotalTax.String())
 	}
 ```
-
+# Contributing:
+> Contributions are welcome. Please open up an issue or create a pull request if you would like to help out.
    
