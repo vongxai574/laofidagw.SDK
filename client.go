@@ -113,7 +113,8 @@ func (l *laofida) connect(ctx context.Context) (string, error) {
 		Message string `json:"message"`
 	}
 
-	if err := json.NewDecoder(resp.Body).Decode(&reply); err != nil {
+	dec := json.NewDecoder(resp.Body)
+	if err := dec.Decode(&reply); err != nil {
 		return "", fmt.Errorf("connectLAOFIDA: json.Decode: %w", err)
 	}
 

@@ -20,11 +20,11 @@ type (
 	laofida struct {
 		baseUrl string
 
-		// clientID is the client id of laofida api backend.
+		// username and password is the client credential of LAOFIDA api backend.
 		username string
 		password string
 
-		// accessToken is used to authenticate with LDB backend.
+		// accessToken is used to authenticate with LAOFIDA backend.
 		accessToken string
 
 		// mu is used to lock access token.
