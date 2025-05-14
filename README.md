@@ -7,5 +7,5 @@
    Thread-safe token access,
    SmartTax record retrieval via the GetDataSmartTaxs method.
 
-#Installation
+# Installation:
 go get github.com/yourusername/laofida
