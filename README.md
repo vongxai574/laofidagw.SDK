@@ -8,10 +8,10 @@
    SmartTax record retrieval via the GetDataSmartTaxs method.
 
 # Installation:
-   go get github.com/yourusername/laofida
+   "go get github.com/yourusername/laofida"
 
 # Usage:
-   `package main
+   "package main
 
 import (
 	"context"
@@ -51,5 +51,4 @@ func main() {
 	for _, record := range data {
 		fmt.Printf("Record ID: %s, Total Tax: %s\n", record.InstanceID, record.TotalTax.String())
 	}
-}
-`
+}"
