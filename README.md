@@ -8,6 +8,6 @@
    - SmartTax record retrieval via the GetDataSmartTaxs method.
 
 # Installation:
-   $ go get github.com/yourusername/laofida
+   'go get github.com/yourusername/laofida'
 
 # Usage:
